@@ -6,6 +6,11 @@ plugins {
     id 'org.graalvm.buildtools.native'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
+repositories {
+    mavenCentral()
+    maven { url = "https://s3-eu-west-1.amazonaws.com/maven.seqera.io/releases" }
+    maven { url = "https://s3-eu-west-1.amazonaws.com/maven.seqera.io/snapshots" }
+}
 
 dependencies {
     implementation 'javax.activation:activation:1.1.1'
