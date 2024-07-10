@@ -7,17 +7,6 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("https://maven.pkg.github.com/seqeralabs/tower-java-sdk")
-        credentials {
-            username = System.getenv("GITHUB_USERNAME")
-            password = System.getenv("GITHUB_TOKEN")
-        }
-    }
-}
-
 dependencies {
     implementation 'javax.activation:activation:1.1.1'
     implementation 'org.slf4j:slf4j-api:1.7.36'
